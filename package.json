@@ -1,13 +1,33 @@
 {
-  "name": "sophies-pattern-library",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@okeeffed/ds-pkg-blog-post",
+  "version": "0.1.47",
+  "main": "./lib/main.js",
+  "module": "./lib/main.js",
+  "types": "./lib/main.d.ts",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stow31/sophies-pattern-library-package.git"
+  },
+  "author": "Sophie Townsend",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okeeffed/ds-pkg-blog-post/issues"
+  },
+  "homepage": "https://github.com/stow31/sophies-pattern-library-package#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
+    "build": "tsc -p tsconfig.json && yarn copy-files",
+    "copy-files": "copyfiles -u 1 \"stories/**/*.css\" \"stories/**/*.svg\" \"stories/**/*.json\" lib/",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_54b760eb9ca502d"
   },
   "dependencies": {
+    "@types/styled-jsx": "^2.2.9",
     "chromatic": "^11.20.2",
     "next": "15.1.0",
     "react": "^19.0.0",
@@ -26,6 +46,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "copyfiles": "^2.4.1",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
     "eslint-plugin-storybook": "^0.11.1",
