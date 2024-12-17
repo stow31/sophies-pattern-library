@@ -24,7 +24,7 @@
     "build": "tsc -p tsconfig.json && yarn copy-files",
     "copy-files": "copyfiles -u 1 \"stories/**/*.css\" \"stories/**/*.svg\" \"stories/**/*.json\" lib/",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@types/styled-jsx": "^2.2.9",
